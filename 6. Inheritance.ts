@@ -3,50 +3,41 @@ class CommonClass {
 firstName : string;
 lastName : string;
 
-displayName(){
-
-console.log("The Name is: "+ this.firstName +" "+ this.lastName )
-
-}
-
-}
-
-
-class Student extends CommonClass{
-
-firstName : string;
-lastName : string;
-
 constructor(firstName : string, lastName : string){
 
-super()
-this.firstName = firstName; 
+this.firstName = firstName;
 this.lastName = lastName;
 
 }
 
+displayName(): void {
+
+console.log("This is the Object from the Common Class with values" + this.firstName + this.lastName)
 
 }
 
 
-class Employee extends CommonClass{
+}
 
-firstName : string;
+
+class ChildClass extends CommonClass{
+
+
+firstName : string; 
 lastName : string;
 
-constructor(firstName : string, lastName : string){
+displayName(): void {
 
-super()
-this.firstName = firstName; 
-this.lastName = lastName;
+console.log("This is the Method from the Child Class with values" + this.firstName + this.lastName)
 
 }
 
+
 }
 
-let s1 = new Student("Ajinkya", "Chanshetty");
+var c1 = new CommonClass("Ajinkya", "Chanshetty");
 
-let e1 = new Employee("vicky", "Chanshetty");
+var c2 = new ChildClass("Vicky", "Chanshetty");
 
-s1.displayName()
-e1.displayName()
+c1.displayName()
+c2.displayName()

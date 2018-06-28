@@ -19,8 +19,9 @@ function multi(a, b, c, d) {
 }
 sum = multi(11, 22, 33);
 console.log("The multiplication is: " + sum);
-function div(a, b) {
-    return a / b;
+function div(a, b, c) {
+    if (c === void 0) { c = 0; }
+    return (a * c) / b;
 }
-sum = div(22, 2);
+sum = div(22, 2, 2);
 console.log("This is the divission " + sum);

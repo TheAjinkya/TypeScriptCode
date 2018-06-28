@@ -38,13 +38,13 @@ sum = multi(11,22,33)
 console.log("The multiplication is: " + sum)
 
 
-function div(a, b){
+function div(a, b, c= 0){
 
-return a/b
+return (a*c)/b
 
 }
 
-sum = div(22, 2)
+sum = div(22, 2, 2)
 
 console.log("This is the divission " + sum)
 

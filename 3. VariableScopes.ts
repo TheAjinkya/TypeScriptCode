@@ -1,34 +1,27 @@
-let globalVal : number =  10000;
-
-class Demo{
-
-globalVal : number = 99999;
-
-classVal : number = 70000;
+let myGlobalVal = 100000;
 
 
-display() : void {
+class myClass {
 
-var functionalVal : number = 11111;
+myGlobalVal = 99999;
 
-var globalVal : number = 22222;
 
-console.log("The Global value inside Class: "+ this.globalVal);
-console.log("The Global value inside Class Function: "+ globalVal);
+getValue():void {
+
+let myGlobalVal = 888888;
+
+console.log("Global value inside the Class is: "+ this.myGlobalVal)
+console.log("Global value inside the Function of the Class is: "+ myGlobalVal)
 
 }
 
 }
 
-function display() : void {
-
-console.log("The External Function will give you the Global Value: "+ globalVal)
-
+function globalFunction(){
+console.log("Global value out of the class is: "+ myGlobalVal)
 }
 
-var d = new Demo();
+var m1 = new myClass();
 
-d.display();
-
-display();
-
+m1.getValue();
+globalFunction();

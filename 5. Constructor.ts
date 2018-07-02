@@ -1,28 +1,37 @@
-class Student {
+class Person {
 
 firstName : string;
 lastName : string;
-contact : number;
 
-constructor(firstName : string, lastName : string, contact : number){
+constructor(){
 
-this.firstName = firstName;
-this.lastName = lastName;
-this.contact = contact;
+var s1 = new Student();
+var e1 = new Employee();
 
 }
 
-displayName(){
+getFullName() : void{
 
-console.log("The Name of the Student is: "+ this.firstName +" "+this.lastName)
+console.log(this.firstName +" "+this.lastName)
+
+}
+}
+
+class Student{
+
+firstName;
+lastName;
 
 }
 
+
+class Employee{
+
+firstName;
+lastName;
+
 }
 
-let s1 = new Student("Ajinkya", "Chanshetty", 1);
-let s2 = new Student("vicky", "Chanshetty", 1);
+var p1 = new Person("Ajinkya", "Chanshetty");
 
-s1.displayName();
-s2.displayName();
-
+p1.getFullName();

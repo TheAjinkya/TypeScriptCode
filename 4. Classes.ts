@@ -1,28 +1,23 @@
-class Student{
+class Person {
 
+firstName : string = "Ajinkya";
+lastName : string = "Chanshetty";
 
-firstName : string = "Ajinkya"
-lastName : string = "Chanshetty"
-contact : number = 9998989899;
-email : string = "aajinkya@hotmail.com"
+displayName(){
 
-display(): void {
-
-console.log("The name of the student is : "+ this.firstName + " "+ this.lastName)
+console.log("The name is: "+this.firstName +" "+this.lastName)
 
 }
 
 }
 
-function display() {
+function displayName(){
 
-console.log("This function is out of the Class")
+console.log("The name is the Global function with the same name")
 
 }
 
 
-var s1 = new Student();
-
-s1.display();
-
-display()
+var p1 = new Person();
+p1.displayName();
+displayName();

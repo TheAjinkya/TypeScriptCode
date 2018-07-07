@@ -1,18 +1,6 @@
-class Person{
+import { Person } from './Person'
 
-firstName : string;
-lastName : string;
-email : string;
-
-
-getFullName(firstName, lastName, email){
-
-return (this.firstName + " "+ this.lastName + " "+ this.email)
-
-}
-
-}
-
+//Above line will import the Person class from the file Person.ts and here extention of the file is not required
 
 function Echo<T>(arg : T) : T{
 
@@ -28,11 +16,14 @@ return Person
 }
 
 var p1 = new Person("Ajinkya", "Chanshetty", "aajinkya@hotmail.com")
+var p2 = new Person("vicky", "Chanshetty", "aajinkya@hotmail.com")
 
 
 var myNumber = Echo(25);
 
-var myObject = personEcho(p1);
+var firstObject = personEcho(p1);
+var secondObject = personEcho(p2);
 
-console.log("The My Number value is: "+ myNumber)
-console.log("The My Object value is: "+ myObject)
+console.log("The My Number value is: ", myNumber)
+console.log("The First Object value is: ", firstObject)
+console.log("The Second Object value is: ", secondObject)
